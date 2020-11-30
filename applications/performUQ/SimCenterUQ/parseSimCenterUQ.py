@@ -33,7 +33,7 @@ run_type = inputArgs[3]
 # run on local computer
 if run_type in ['runningLocal',]:
     # MAC
-    if (sys.platform == 'darwin'):
+    if (sys.platform == 'darwin' or sys.platform == "linux" or sys.platform == "linux2"):
         OpenSees = 'OpenSees'
         natafExe = 'nataf_gsa'        
         Feap = 'feappv'

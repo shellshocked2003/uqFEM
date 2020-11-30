@@ -239,8 +239,8 @@ InputWidgetFEM::inputFromJSON(QJsonObject &jsonObject)
 
 	    if (femSelection->currentText() == "Custom") {
 	      // Check how many input files
-	      customInputFiles.resize(femObject["fileInfo"].toArray().count());
-
+	      theCustomInputNumber->setValue(femObject["fileInfo"].toArray().count());
+	      
 	      int count = 0;
 	      for (auto const& val : femObject["fileInfo"].toArray()) {
 		customInputFiles.at(count)->setText(val.toString());
